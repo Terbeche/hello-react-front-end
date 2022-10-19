@@ -1,10 +1,9 @@
-import React  from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import React from 'react';
+import { useSelector } from 'react-redux';
 
 const Greeting = () => {
-  return (
-            <div>test</div>
-  );
-}
+  const message = useSelector((state) => state.messages.greeting);
+  return (<div className="message">{message}</div>);
+};
 
 export default Greeting;
